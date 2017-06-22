@@ -1,0 +1,7 @@
+#!/bin/bash
+cd src
+rm lambda.zip
+zip -r lambda.zip *
+aws lambda update-function-code --profile personal --function-name TransactionRegister --zip-file fileb://lambda.zip
+cd ..
+
